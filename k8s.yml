@@ -4,35 +4,33 @@ kind: Deployment
 metadata:
   name: minergate
   labels:
-    service: minergate
+    app: minergate
 spec:
   replicas: 3
   revisionHistoryLimit: 10
   selector:
     matchLabels:
-      service: minergate
+      app: minergate
   template:
     metadata:
       labels:
-        service: minergate
+        app: minergate
     spec:
       affinity:
         podAntiAffinity:
-          preferredDuringSchedulingIgnoredDuringExecution:
-          - weight: 100
-            podAffinityTerm:
-              labelSelector:
-                matchExpressions:
-                - key: service
-                  operator: In
-                  values:
-                  - minergate
-              topologyKey: kubernetes.io/hostname
+          requiredDuringSchedulingIgnoredDuringExecution:
+          - labelSelector:
+              matchExpressions:
+              - key: app
+                operator: In
+                values:
+                - minergate
+            topologyKey: "kubernetes.io/hostname"
       containers:
         - name: minergate
           image: quay.io/adrianchifor/minergate-docker:master
           imagePullPolicy: Always
-          command:
+          args:
             - "-u"
             - "<email>"
             - "--<currency>"

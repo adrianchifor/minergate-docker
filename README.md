@@ -7,11 +7,12 @@ Easy cryptocurrency miner in Docker.
 - Sign-up to [MinerGate](https://minergate.com/reg)
 - Run the miner:
   - Docker:
+
   ```
   docker run -d quay.io/adrianchifor/minergate-docker:master "-u" "<email>" "--<currency>"
   ```
-  - Kubernetes:
-  <br>Change replicas, email and currency in `k8s.yml`
+  - Kubernetes (change email, currency and replicas in `k8s.yml`):
+
   ```
   kubectl apply -f k8s.yml
   ```
