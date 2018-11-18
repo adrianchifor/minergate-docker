@@ -2,9 +2,11 @@
 
 Easy cryptocurrency miner in Docker.
 
+Legal Disclaimer: Only mine cryptocurrencies in [countries where it is legal to do so](https://en.wikipedia.org/wiki/Legality_of_bitcoin_by_country_or_territory) and on your own hardware or servers. If you mine cryptocurrency on other people's machines without their permission, you might be liable for damages and prosecuted.
+
 ## Run
 
-- Sign-up to [MinerGate](https://minergate.com/reg)
+- Sign-up to [MinerGate](https://minergate.com/a/7b8d65654da0aff9698b38af)
 - Run the miner:
   - Docker:
 
