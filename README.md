@@ -11,7 +11,8 @@ Legal Disclaimer: Only mine cryptocurrencies in [countries where it is legal to 
   - Docker:
 
   ```
-  docker run -d quay.io/adrianchifor/minergate-docker:master "-u" "<email>" "--<currency>"
+  docker build -t minergate .
+  docker run -d minergate "-u" "<email>" "--<currency>"
   ```
   - Kubernetes (change email, currency and replicas in `k8s.yml`):
 
@@ -21,7 +22,7 @@ Legal Disclaimer: Only mine cryptocurrencies in [countries where it is legal to 
 
 ## Help
 ```
-docker run -t --rm quay.io/adrianchifor/minergate-docker:master "--help"
+docker run -t --rm minergate "--help"
 ```
 ```
 Usage:
