@@ -28,7 +28,7 @@ spec:
             topologyKey: "kubernetes.io/hostname"
       containers:
         - name: minergate
-          image: quay.io/adrianchifor/minergate-docker:master
+          image: <your minergate image>
           imagePullPolicy: Always
           args:
             - "-u"
